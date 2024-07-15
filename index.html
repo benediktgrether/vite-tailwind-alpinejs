@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Vite App</title>
+		<script defer type="module" src="/src/main.js"></script>
+		<link href="/src/styles.scss" rel="stylesheet" />
+	</head>
+	<body class="bg-gray-100">
+		<div x-data="{ message: 'Hello, Alpine.js! Its Working' }" class="p-6">
+			<h1 class="text-2xl font-bold bg-amber-500" x-text="message"></h1>
+		</div>
+
+		<!-- Collapse -->
+
+		<div x-data="{ isOpen: false }" class="p-6">
+			<button
+				@click="isOpen = !isOpen"
+				class="px-4 py-2 bg-blue-500 text-white rounded"
+			>
+				Toggle Collapse
+			</button>
+			<div x-show="isOpen" class="mt-4 p-4 border rounded bg-white">
+				<p class="text-lg">
+					This is the collapsible content section. It can include any
+					content you want.
+				</p>
+			</div>
+		</div>
+	</body>
+</html>
